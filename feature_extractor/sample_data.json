@@ -1,0 +1,49 @@
+{
+    "general": {
+      "size": 1024,
+      "vsize": 2048,
+      "has_debug": true,
+      "imports": ["kernel32.dll", "user32.dll"],
+      "exports": ["ExportFunction1", "ExportFunction2"],
+      "has_relocations": false,
+      "has_resources": true,
+      "has_signature": false,
+      "has_tls": true,
+      "symbols": ["Symbol1", "Symbol2"]
+    },
+    "header": {
+      "coff": {
+        "timestamp": 123456,
+        "machine": "x86",
+        "characteristics": ["Characteristics1", "Characteristics2"]
+      },
+      "optional": {
+        "dll_characteristics": ["DLLCharacteristic1", "DLLCharacteristic2"],
+        "magic": "PE",
+        "major_image_version": 1,
+        "minor_image_version": 0,
+        "major_linker_version": 10,
+        "minor_linker_version": 0,
+        "major_operating_system_version": 6,
+        "minor_operating_system_version": 0,
+        "major_subsystem_version": 5,
+        "minor_subsystem_version": 1,
+        "sizeof_code": 4096,
+        "sizeof_headers": 1024,
+        "sizeof_heap_commit": 2048
+      }
+    },
+    "strings": {
+      "paths": ["C:\\Windows\\System32\\file1.dll", "C:\\Windows\\System32\\file2.dll"],
+      "urls": ["http://example.com"],
+      "registry": ["RegistryKey1", "RegistryKey2"],
+      "MZ": ["MZString1", "MZString2"]
+    },
+    "imports": {
+      "kernel32.dll": ["Function1", "Function2"],
+      "user32.dll": ["Function3", "Function4"]
+    },
+    "exports": ["ExportFunction1", "ExportFunction2"],
+    "label": 1
+  }
+  
