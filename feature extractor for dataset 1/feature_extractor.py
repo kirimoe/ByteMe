@@ -29,7 +29,7 @@ def extract_pe_features(file_path):
     'rsrc_VirtualAddress': pe.sections[6].VirtualAddress if len(pe.sections) > 6 else None,
     'text_NumberOfLinenumbers': pe.sections[5].NumberOfLinenumbers if len(pe.sections) > 5 else None,
     'e_ip': pe.DOS_HEADER.e_ip,
-    'SHA256': pe.sections[0].get_hash_md5() if len(pe.sections) > 0 else None,
+    'MD5': pe.sections[0].get_hash_md5() if len(pe.sections) > 0 else None,
     'edata_Characteristics': pe.sections[4].Characteristics if len(pe.sections) > 4 else None,
     'MajorOperatingSystemVersion': pe.OPTIONAL_HEADER.MajorOperatingSystemVersion,
     'edata_PointerToRawData': pe.sections[4].PointerToRawData if len(pe.sections) > 4 else None,
@@ -156,7 +156,7 @@ def extract_pe_features(file_path):
 
 if __name__ == '__main__':
     # Example usage:
-    file_path = 'calc.exe'
+    file_path = sys.argv[1]
     extracted_features = extract_pe_features(file_path)
 
     # Print all the extracted features
